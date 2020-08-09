@@ -1,36 +1,85 @@
 body{
     background-color:rgba(30,30,30,1);
 }
-.naslov_stranice{
-    color:white;
-    background-color:rgba(63,81,181,1);
-    font: size 2rem;;
-    text-align: center;
-    padding-top: 10px; padding-bottom: 10px;
-    margin-bottom: 20px;
+
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Playfair Display', serif;
 }
 
+/* Generic styles */
 
-.kartice {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    text-align: center
+a {
+  font-size: 2rem;
+  background-color: rgba(63,81,181,1);
+  text-decoration: none;
+  color: white;
+  border-radius: .3rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+  padding: 2rem;
 }
 
-.kartica {
-    background-color:rgba(63,81,181,.5);
+a:hover {
+  opacity: .6;
+}
+
+/*------------------------sekcija page title-------------------------*/
+.page-title{
+    background-color: rgba(63,81,181,1);
+    height: 100px;
+    /* margin-bottom: 1rem; */
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+}
+.page-title > h1{
+    padding-top: 2rem;
+    font-size: 2rem;
     color: white;
+    text-align: center;
 }
 
+/*------------------------sekcija logo-------------------------------*/
+.logo {
+    background: url('images/logo.jpg') center;
+    height: 300px;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    /* align-items: center; */
+}
+.logo > h1{
+    font-size: 4rem;
+    text-align: center;
+}
 
-.kartica > ul {
+/* /////////////////////////////////////////////////////////////////////////////// */
+.menu{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(63,81,181,1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-gap: 1rem; */
+}
+
+/*/////////////////////sekcija kartice////////////////////////////////////////*/
+/* .kartice {margin-top: 2rem;} */
+
+.kartice > ul {
+    display: grid;
     list-style-type: none;
-    padding: 0;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
 }
-.kartica > ul > li > figure{
+.kartice > ul > li {
+    border: 1px solid rgba(63,81,181,1);
+    border-radius: .5rem;
+}
+.kartice > ul > li > figure{
     max-height: 300px;
     overflow: hidden;
     border-top-left-radius: .5rem;
@@ -38,22 +87,20 @@ body{
     position: relative;
 }
 
-.kartica > ul > li >figure > img {
-    height: 280px;
-    width: 280px;
-
+.kartice > ul > li >figure > img {
+    width: 100%;
   }
 
-
-.kartica > ul > li >figure > figcaption {
+.kartice > ul > li >figure > figcaption {
     position: absolute;
     bottom: 0;
     background-color: rgba(63,80,180,.75);
     width: 100%;
 
   }
-/* li > figure > figcaption > h3 {
+.kartice > ul > li > figure > figcaption > h3 {
     color: white;
     padding: .75rem;
     font-size: larger;
-  } */
+  }
+
